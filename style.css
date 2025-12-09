@@ -1,50 +1,680 @@
-body {
-    font-family: 'Tahoma';
-    direction: rtl;
+/* Reset و تنظیمات پایه */
+* {
     margin: 0;
     padding: 0;
-    background: #eff796;
+    box-sizing: border-box;
 }
 
-nav {
+:root {
+    /* پالت رنگی محیط آموزشی */
+    --primary-color: #4A6FA5;  /* آبی آموزشی */
+    --secondary-color: #FF9A76; /* نارنجی انرژی‌بخش */
+    --accent-color: #6BCF7F;   /* سبز موفقیت */
+    --light-color: #F8F9FA;
+    --dark-color: #2C3E50;
+    --text-color: #333;
+    --text-light: #777;
+    --border-color: #E1E5EB;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: #fff;
+    direction: rtl;
+    text-align: right;
+}
+
+h1, h2, h3, h4, .lalezar {
+    font-family: 'Lalezar', cursive;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* هدر و نویگیشن */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color), #3A5A8A);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
-    background: #6399f8;
-    color: rgb(7, 7, 7);
-    padding: 15px 40px;
+    align-items: center;
 }
 
-nav ul {
-    list-style: none;
+.nav-brand h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.nav-brand .subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.nav-menu {
     display: flex;
-    gap: 20px;
-}
-nav a { color: white; text-decoration: none; }
-
-.hero {
-    text-align: center;
-    padding: 50px 0;
-    background: white;
+    list-style: none;
+    gap: 2rem;
 }
 
-.profile {
-    width: 180px;
-    height: 180px;
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* بخش هیرو */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)),
+                url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.profile-container {
+    flex: 1;
+}
+
+.profile-img-frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: var(--shadow);
 }
 
-h2 { text-align: center; margin-top: 40px; }
-
-.box {
-    background: white;
-    width: 70%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
+.profile-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
-footer {
-    background: #222;
-    padding: 15px;
+
+.hero-text {
+    flex: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-title .highlight {
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat {
     text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* دکمه‌ها */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.btn-primary {
+    background: var(--primary-color);
     color: white;
 }
+
+.btn-primary:hover {
+    background: #3A5A8A;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5ABF72;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-small {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* بخش‌های عمومی */
+.section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.bg-light {
+    background-color: var(--light-color);
+}
+
+/* کارت مقالات */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.article-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.article-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), #3A5A8A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.article-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.article-desc {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.article-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* دوره‌ها */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-header {
+    background: linear-gradient(135deg, var(--primary-color), #3A5A8A);
+    color: white;
+    padding: 2rem;
+    position: relative;
+}
+
+.course-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.course-badge.popular {
+    background: var(--secondary-color);
+}
+
+.course-badge.new {
+    background: var(--accent-color);
+}
+
+.course-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-subtitle {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.course-features {
+    padding: 2rem;
+    list-style: none;
+}
+
+.course-features li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-features i {
+    color: var(--accent-color);
+}
+
+.course-footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* ویدئوها */
+.video-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.video-wrapper {
+    flex: 2;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.video-placeholder {
+    position: relative;
+    height: 300px;
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-placeholder i {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.video-info {
+    padding: 2rem;
+}
+
+.video-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.video-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: var(--text-light);
+}
+
+.video-thumbnails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.thumbnail {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.thumbnail.active {
+    border-right: 4px solid var(--primary-color);
+}
+
+.thumbnail:hover {
+    transform: translateX(-5px);
+}
+
+.thumbnail img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* لینک‌ها */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.link-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: block;
+}
+
+.link-card:hover {
+    transform: translateY(-10px);
+    background: var(--primary-color);
+    color: white;
+}
+
+.link-card:hover .link-icon {
+    background: white;
+    color: var(--primary-color);
+}
+
+.link-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+/* بخش تماس */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-methods {
+    margin: 2rem 0;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--light-color);
+    border-radius: 8px;
+}
+
+.contact-method i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.1);
+}
+
+/* فوتر */
+.main-footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-right: 5px;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border

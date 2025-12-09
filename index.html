@@ -1,88 +1,408 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>روشن هادی – مدرس پایتون</title>
+    <title>هادی روشن – مدرس تخصصی پایتون و برنامه‌نویسی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- هدر با نویگیشن -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h1><i class="fas fa-graduation-cap"></i> آکادمی پایتون</h1>
+                    <span class="subtitle">مدرس: هادی روشن</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> خانه</a></li>
+                    <li><a href="#articles" class="nav-link"><i class="fas fa-newspaper"></i> مقالات</a></li>
+                    <li><a href="#courses" class="nav-link"><i class="fas fa-book-open"></i> دوره‌ها</a></li>
+                    <li><a href="#videos" class="nav-link"><i class="fas fa-play-circle"></i> ویدئوها</a></li>
+                    <li><a href="#links" class="nav-link"><i class="fas fa-link"></i> منابع</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> تماس</a></li>
+                </ul>
+                
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <nav>
-        <h2>به وبسایت رسمی هادی روشن خوش آمدید </h2>
-        <ul>
-            <li><a href="#home">خانه</a></li>
-            <li><a href="#articles">مقالات</a></li>
-            <li><a href="#courses">دوره‌ها</a></li>
-            <li><a href="#videos">ویدئوها</a></li>
-            <li><a href="#links">لینک‌های مفید</a></li>
-            <li><a href="#contact">تماس</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- بخش اصلی - هیرو -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-container">
+                    <div class="profile-img-frame">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="هادی روشن" class="profile-img">
+                        <div class="profile-badge">
+                            <i class="fas fa-star"></i> مدرس برتر
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-text">
+                    <h2 class="hero-title">روشن <span class="highlight">هادی</span></h2>
+                    <h3 class="hero-subtitle">مدرس تخصصی پایتون و علوم داده ها</h3>
+                    <p class="hero-desc">
+                        به آکادمی آموزش برنامه‌نویسی خوش آمدید! اینجا با روش‌های مدرن و پروژه‌محور، 
+                        پایتون، هوش مصنوعی و علوم داده را به صورت عملی و کاربردی یاد می‌گیرید.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">۱۵۰۰+</span>
+                            <span class="stat-label">دانشجو</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">۴۰+</span>
+                            <span class="stat-label">دوره آموزشی</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">۹۸%</span>
+                            <span class="stat-label">رضایت</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary">
+                            <i class="fas fa-play-circle"></i> مشاهده دوره‌ها
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-user-graduate"></i> مشاوره رایگان
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="home" class="hero">
-    <img src="images/profile.jpg" class="profile">
-    <h1>روشن هادی</h1>
-    <h3>مدرس پایتون و علوم کامپیوتر</h3>
-    <p>ارائه دهنده آموزش‌های تخصصی برنامه‌نویسی، هوش مصنوعی و پایگاه داده</p>
-</section>
+    <!-- مقالات -->
+    <section id="articles" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-pen-nib"></i> مقالات آموزشی
+                </h2>
+                <p class="section-subtitle">به روزترین مطالب آموزشی پایتون و تکنولوژی</p>
+            </div>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="article-title">نکات طلایی پایتون برای حرفه‌ای‌ها</h3>
+                    <p class="article-desc">
+                        ۲۵ تکنیک پیشرفته پایتون که سرعت کدنویسی شما را چند برابر می‌کند.
+                    </p>
+                    <a href="articles/python-tips.html" class="article-link">
+                        مطالعه مقاله <i class="fas fa-arrow-left"></i>
+                    </a>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="article-title">مبانی هوش مصنوعی و یادگیری ماشین</h3>
+                    <p class="article-desc">
+                        از صفر تا صد مفاهیم پایه‌ای هوش مصنوعی با مثال‌های عملی.
+                    </p>
+                    <a href="articles/ai-basics.html" class="article-link">
+                        مطالعه مقاله <i class="fas fa-arrow-left"></i>
+                    </a>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="article-title">بهینه‌سازی پایگاه‌های داده</h3>
+                    <p class="article-desc">
+                        تکنیک‌های پیشرفته برای افزایش کارایی پایگاه داده در پروژه‌های بزرگ.
+                    </p>
+                    <a href="#" class="article-link">
+                        مطالعه مقاله <i class="fas fa-arrow-left"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
 
-<section id="articles">
-    <h2>مقالات</h2>
-    <div class="box">
-        <ul>
-            <li><a href="articles/python-tips.html">نکات طلایی پایتون</a></li>
-            <li><a href="articles/ai-basics.html">مبانی هوش مصنوعی</a></li>
-        </ul>
-    </div>
-</section>
+    <!-- دوره‌ها -->
+    <section id="courses" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i> دوره‌های آموزشی
+                </h2>
+                <p class="section-subtitle">آموزش‌های پروژه‌محور از مبتدی تا پیشرفته</p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-badge popular">پرفروش</span>
+                        <h3 class="course-title">دوره جامع پایتون</h3>
+                        <p class="course-subtitle">مقدماتی تا پیشرفته</p>
+                    </div>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check-circle"></i> ۸۰ ساعت آموزش ویدیویی</li>
+                        <li><i class="fas fa-check-circle"></i> ۳۰ پروژه عملی</li>
+                        <li><i class="fas fa-check-circle"></i> پشتیبانی مستقیم مدرس</li>
+                        <li><i class="fas fa-check-circle"></i> گواهینامه معتبر</li>
+                    </ul>
+                    <div class="course-footer">
+                        <span class="course-price">۱,۲۹۰,۰۰۰ تومان</span>
+                        <a href="#" classbtn btn-small">ثبت نام</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-badge new">جدید</span>
+                        <h3 class="course-title">دوره یادگیری ماشین</h3>
+                        <p class="course-subtitle">با پایتون و scikit-learn</p>
+                    </div>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check-circle"></i> ۶۰ ساعت آموزش تخصصی</li>
+                        <li><i class="fas fa-check-circle"></i> ۱۵ پروژه واقعی</li>
+                        <li><i class="fas fa-check-circle"></i> تمرین‌های تعاملی</li>
+                        <li><i class="fas fa-check-circle"></i> جامعه دانشجویان</li>
+                    </ul>
+                    <div class="course-footer">
+                        <span class="course-price">۱,۵۹۰,۰۰۰ تومان</span>
+                        <a href="#" classbtn btn-small">ثبت نام</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-badge">تخصصی</span>
+                        <h3 class="course-title">دوره پایگاه داده و SQL</h3>
+                        <p class="course-subtitle">طراحی و پیاده‌سازی</p>
+                    </div>
+                    <ul class="course-features">
+                        <li><i class="fas fa-check-circle"></i> ۴۵ ساعت آموزش عملی</li>
+                        <li><i class="fas fa-check-circle"></i> ۲۰ پروژه کاربردی</li>
+                        <li><i class="fas fa-check-circle"></i> آموزش MySQL و PostgreSQL</li>
+                        <li><i class="fas fa-check-circle"></i> آمادگی بازار کار</li>
+                    </ul>
+                    <div class="course-footer">
+                        <span class="course-price">۹۹۰,۰۰۰ تومان</span>
+                        <a href="#" classbtn btn-small">ثبت نام</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="courses">
-    <h2>دوره‌ها</h2>
-    <div class="box">
-        <ul>
-            <li>دوره جامع پایتون – مقدماتی تا پیشرفته</li>
-            <li>دوره یادگیری ماشین</li>
-            <li>دوره پایگاه داده و SQL</li>
-        </ul>
-    </div>
-</section>
+    <!-- ویدئوها -->
+    <section id="videos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-play-circle"></i> ویدئوهای رایگان
+                </h2>
+                <p class="section-subtitle">نمونه‌ای از آموزش‌های رایگان برای آشنایی</p>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play"></i>
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="آموزش پایتون">
+                    </div>
+                    <div class="video-info">
+                        <h3>آموزش نصب و راه‌اندازی پایتون</h3>
+                        <p>در این ویدئو رایگان، نحوه نصب پایتون، انتخاب ویرایشگر و ساخت اولین پروژه را یاد می‌گیرید.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-clock"></i> ۲۵ دقیقه</span>
+                            <span><i class="fas fa-eye"></i> ۱۲,۵۴۳ بازدید</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-thumbnails">
+                    <div class="thumbnail active">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="پایتون">
+                        <span>متغیرها در پایتون</span>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="دیتاساینس">
+                        <span>آشنایی با Pandas</span>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="هوش مصنوعی">
+                        <span>مبانی یادگیری ماشین</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="videos">
-    <h2>ویدئوها</h2>
-    <div class="box">
-        <video controls width="400">
-            <source src="videos/python_intro.mp4">
-        </video>
-    </div>
-</section>
+    <!-- منابع مفید -->
+    <section id="links" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-external-link-alt"></i> لینک‌ها و منابع مفید
+                </h2>
+                <p class="section-subtitle">سایت‌های مرجع برای توسعه مهارت‌های برنامه‌نویسی</p>
+            </div>
+            
+            <div class="links-grid">
+                <a href="https://python.org" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python.org</h3>
+                    <p>وبسایت رسمی پایتون - مستندات و دانلود</p>
+                </a>
+                
+                <a href="https://github.com" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>بزرگترین پلتفرم اشتراک‌گذاری کد</p>
+                </a>
+                
+                <a href="https://stackoverflow.com" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-stack-overflow"></i>
+                    </div>
+                    <h3>StackOverflow</h3>
+                    <p>جامعه پرسش و پاسخ برنامه‌نویسان</p>
+                </a>
+                
+                <a href="https://w3schools.com" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>W3Schools</h3>
+                    <p>آموزش‌های تعاملی برنامه‌نویسی</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<section id="links">
-    <h2>لینک‌های مفید</h2>
-    <div class="box">
-        <ul>
-            <li><a href="https://python.org">Official Python</a></li>
-            <li><a href="https://github.com">GitHub</a></li>
-            <li><a href="https://stackoverflow.com">StackOverflow</a></li>
-        </ul>
-    </div>
-</section>
+    <!-- تماس -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">
+                        <i class="fas fa-envelope"></i> ارتباط با من
+                    </h2>
+                    <p class="contact-desc">
+                        برای مشاوره رایگان، پیشنهاد همکاری یا سوالات آموزشی با من در تماس باشید.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <div>
+                                <h4>ایمیل</h4>
+                                <p>roshan.hadi@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h4>تلگرام</h4>
+                                <p>@HadiRoshan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>تلفن</h4>
+                                <p>01155256633-09112921512</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="http://t.me/HadiRoshan" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>ارسال پیام</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="نام و نام خانوادگی" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="ایمیل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="موضوع" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="متن پیام شما..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> ارسال پیام
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="contact">
-    <h2>تماس</h2>
-    <div class="box">
-        <p>ایمیل: your-email@example.com</p>
-        <p>تلگرام: @yourID</p>
-    </div>
-</section>
+    <!-- فوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-graduation-cap"></i> آکادمی پایتون</h3>
+                    <p>ارائه بهترین آموزش‌های برنامه‌نویسی با کیفیت بالا</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>دسترسی سریع</h4>
+                    <ul>
+                        <li><a href="#home">خانه</a></li>
+                        <li><a href="#articles">مقالات</a></li>
+                        <li><a href="#courses">دوره‌ها</a></li>
+                        <li><a href="#contact">تماس</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>عضویت در خبرنامه</h4>
+                    <p>جدیدترین مقالات و دوره‌ها را دریافت کنید</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="ایمیل شما">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© ۱۴۰۳ - تمامی حقوق برای <strong>آکادمی پایتون (هادی روشن)</strong> محفوظ است.</p>
+                <p>طراحی شده با <i class="fas fa-heart"></i> برای جامعه برنامه‌نویسان ایران</p>
+            </div>
+        </div>
+    </footer>
 
-<footer>
-    <p>© 2025 — طراحی شده توسط روشن هادی</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
