@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="1.jpg">    
 </head>
-
+    
 <body>
     <!-- هدر با نویگیشن -->
     <header class="main-header">
@@ -41,8 +43,8 @@
             <div class="hero-content">
                 <div class="profile-container">
                     <div class="profile-img-frame">
-                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                             alt="هادی روشن" class="profile-img">
+                    <img src="roshan1.jpg"  alt="هادی روشن" class="profile-img"> 
+
                         <div class="profile-badge">
                             <i class="fas fa-star"></i> مدرس برتر
                         </div>
@@ -218,11 +220,14 @@
             
             <div class="video-container">
                 <div class="video-wrapper">
-                    <div class="video-placeholder">
-                        <i class="fas fa-play"></i>
-                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="آموزش پایتون">
+                    <div class="video-player">
+                        <video controls poster="1.jpg" width="100%">
+                            <source src="1.mp4" type="video/mp4">
+                            <p>مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند. می‌توانید <a href="1.mp4">آن را دانلود کنید</a>.</p>
+                        </video>
+                        <p class="video-caption">آموزش پایتون - مدرس: هادی روشن</p>
                     </div>
+                                        
                     <div class="video-info">
                         <h3>آموزش نصب و راه‌اندازی پایتون</h3>
                         <p>در این ویدئو رایگان، نحوه نصب پایتون، انتخاب ویرایشگر و ساخت اولین پروژه را یاد می‌گیرید.</p>
@@ -235,22 +240,21 @@
                 
                 <div class="video-thumbnails">
                     <div class="thumbnail active">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="پایتون">
+                        <img src="1.jpg" alt="پایتون">
                         <span>متغیرها در پایتون</span>
                     </div>
                     <div class="thumbnail">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="دیتاساینس">
+                        <img src="1.jpg" alt="دیتاساینس">
                         <span>آشنایی با Pandas</span>
                     </div>
                     <div class="thumbnail">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="هوش مصنوعی">
+                        <img src="1.jpg" alt="هوش مصنوعی">
                         <span>مبانی یادگیری ماشین</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- منابع مفید -->
     <section id="links" class="section bg-light">
         <div class="container">
@@ -296,7 +300,6 @@
             </div>
         </div>
     </section>
-
     <!-- تماس -->
     <section id="contact" class="section">
         <div class="container">
@@ -366,7 +369,6 @@
             </div>
         </div>
     </section>
-
     <!-- فوتر -->
     <footer class="main-footer">
         <div class="container">
